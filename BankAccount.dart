@@ -1,6 +1,6 @@
 class BankAccount {
-  String? accountHolderName;
-  int? accountNumber;
+  String accountHolderName;
+  int accountNumber;
   double _balance = 0.0;
 
   BankAccount(this.accountHolderName, this.accountNumber, this._balance);
@@ -15,7 +15,7 @@ class BankAccount {
 
   void deposit(double amount) {
     if (amount > 0) {
-      this._balance +=amount;
+      this._balance += amount;
     } else {
       print("Invalid deposit amount! Amount must be greater than 0.");
     }
@@ -25,7 +25,9 @@ class BankAccount {
     if (amount > 0 && amount <= this._balance) {
       this._balance -= amount;
     } else {
-      print("Invalid withdrawal amount! Amount must be greater than 0 and less than or equal to account balance.");
+      print(
+        "Invalid withdrawal amount! Amount must be greater than 0 and less than or equal to account balance.",
+      );
     }
-  }// End method
+  } // End method
 }
