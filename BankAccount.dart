@@ -20,4 +20,12 @@ class BankAccount {
       print("Invalid deposit amount! Amount must be greater than 0.");
     }
   } // End method
+
+  void withdraw(double amount) {
+    if (amount > 0 && amount <= this._balance) {
+      this._balance -= amount;
+    } else {
+      print("Invalid withdrawal amount! Amount must be greater than 0 and less than or equal to account balance.");
+    }
+  }// End method
 }
